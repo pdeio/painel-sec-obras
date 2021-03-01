@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="80" height="45" viewBox="0 0 80 45">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 50px;
+        fill: #fefefe;
+        font-family: "Comic Sans MS";
+      }
+    </style>
+  </defs>
+  <text id="age" class="cls-1" y="29">age</text>
+</svg>

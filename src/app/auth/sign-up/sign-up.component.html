@@ -1,0 +1,117 @@
+<div
+  class="auth-layout-wrap"
+  style="background-image: url('{{ config.backgroundImage }}')"
+>
+  <div class="auth-content">
+    <div class="card o-hidden ng-trigger ng-trigger-animate">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="auth-logo text-center mb-4 pt-4">
+            <img
+              class="logo-svg"
+              alt=""
+              src="assets/default-images/fcaln3kn94nac894nfa84tnuad732akgdg23uhauhhih4.svg"
+              height="70"
+            />
+            <img
+              [src]="config.logo"
+              class="ml-4"
+              height="70"
+              alt="logo da empresa"
+            />
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="p-4">
+            <h1 class="mb-3 text-18"><b>Sua nova conta bem rapidinho!</b></h1>
+            <form [formGroup]="form">
+              <div class="row">
+                <div class="form-group col-12">
+                  <input
+                    class="form-control form-control-rounded"
+                    formControlName="email"
+                    required
+                    placeholder="Digite aqui seu email"
+                    id="email"
+                    type="email"
+                  />
+                  <div
+                    class="invalid-feedback"
+                    [style.display]="
+                      form.get('email').dirty && form.get('email').invalid
+                        ? 'block'
+                        : 'none'
+                    "
+                  >
+                    Precisamos de um email válido.
+                  </div>
+                </div>
+                <div class="form-group col-6">
+                  <input
+                    class="form-control form-control-rounded"
+                    formControlName="password"
+                    placeholder="Senha"
+                    required
+                    id="password"
+                    type="password"
+                  />
+                  <div
+                    class="invalid-feedback"
+                    [style.display]="
+                      form.get('password').dirty && form.get('password').invalid
+                        ? 'block'
+                        : 'none'
+                    "
+                  >
+                    Min 6 caracteres.
+                  </div>
+                </div>
+                <div class="form-group col-6">
+                  <input
+                    class="form-control form-control-rounded"
+                    formControlName="password_confirmation"
+                    type="password"
+                    required
+                    placeholder="Confirma sua senha"
+                  />
+                  <div
+                    class="invalid-feedback"
+                    [style.display]="
+                      form.get('password_confirmation').hasError('mustMatch')
+                        ? 'block'
+                        : 'none'
+                    "
+                  >
+                    Senhas não conferem.
+                  </div>
+                </div>
+
+                <div class="col-md-6 ">
+                  <button
+                    class="btn btn-rounded btn-outline-primary btn-block"
+                    type="submit"
+                    (click)="onSubmit()"
+                    [disabled]="form.invalid"
+                  >
+                    <span>Criar </span>
+                  </button>
+                </div>
+                <div class="col-md-6 mt-3 mt-md-0">
+                  <button
+                    class="btn btn-rounded btn-outline-primary btn-block"
+                    [routerLink]="['/' + routes.signIn]"
+                  >
+                    <i class="i-Mail-with-At-Sign"></i> Ja tem conta?
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div *ngIf="loading">
+  <div class="spinner-bubble spinner-bubble-primary m-5"></div>
+</div>

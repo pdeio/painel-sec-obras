@@ -1,0 +1,41 @@
+.header {
+
+  [class^="bt-"],
+  [class*=" bt-"] {
+    color: #585050;
+  }
+  position: absolute;
+  top: 0;
+  height: 80px;
+
+  background-color: #fff;
+  width: 100%;
+
+
+
+  .user {
+    font-size: 0.711375rem !important;
+    color: #70657b !important;
+
+    .avatar {
+      width: 36px;
+      height: 36px;
+      cursor: pointer;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: top;
+    }
+
+    .dropdown-toggle::after {
+      display: none !important;
+    }
+  }
+}
+
+button.active {
+  background: #eee;
+  color: #332e38;
+}
+
+
+

@@ -1,0 +1,56 @@
+<div class="sidebar h-100">
+    <div class="sidebar-left  {{ themeSelected }}">
+      <div class="logo">
+        <img class="img-fluid" src="assets/default-images/fcaln3kn94nac894nfa84tnuad732akgdg23uhauhhih4.svg" alt="" srcset="" />
+      </div>
+      <ul class="navigation-left m-0 p-0 text-center">
+        <li
+          *ngFor="let route of mainRoutes; index as i"
+          [routerLink]="'/' + route.url"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: route.url === '' ? true : false }"
+          placement="right"
+          [ngbTooltip]="route.label"
+        >
+          <span class="bt bt-{{ route.icon }} bt-2x"></span>
+        </li>
+        <li
+        class="d-block d-lg-none"
+
+        placement="right"
+        [ngbTooltip]="'Estender'"
+        (click)="subMenuForceOpened = !subMenuForceOpened;"
+      >
+        <span class="bt bt-arrow-right bt-2x"></span>
+      </li>
+      </ul>
+    </div>
+    <div  class="sidebar-submenu pt-3 {{subMenuForceOpened ? 'open' : ''}}" >
+      <header class="px-4">
+        <div class="logo mb-1 py-2" [style]="'background-image: url(' + logo + ')'">
+        </div>
+        <h6 class="mt-4">{{ subMenu.title }}</h6>
+        <p class="text-muted">{{ subMenu.description }}</p> 
+      </header>
+      <div class="p-3">
+        <template #component> </template>
+      </div>
+      <ul class="menu p-0">
+         <li *ngFor="let link of subMenu.linkList">
+          <button
+            class="btn btn-block rounded-0"
+            [fragment]="link.fragment ? link.fragment : null"
+            [routerLink]="link.url"
+            [routerLinkActiveOptions]="{ exact: true }"
+            routerLinkActive="{{(link.fragment && !link.fragmentActive) ? '' : 'active'}}"
+            [disabled]="link.disabled ? link.disabled : false"
+          >
+            <span class="bt {{ link.icon }} mr-2"></span>
+            <span>{{ link.title }}</span>
+          </button>
+        </li> 
+      </ul>
+    </div>
+  </div>
+  <div class="sidebar-spacer h-100"></div>
+  

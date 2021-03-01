@@ -1,0 +1,11 @@
+.media{
+    font-size: smaller;
+    .logo{
+        height: 50px;
+        background: var(--primary-color);
+        width: 50px;
+        img {
+            height: 80%;
+        }
+    }
+}

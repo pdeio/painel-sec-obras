@@ -1,0 +1,96 @@
+/** NGB TOAST STYLE */
+.toast {
+    box-shadow: none;
+    background: none;
+    border: none;
+  }
+  /** NGB TOAST STYLE */
+  /** NGB ALERT STYLE */
+  .alert {
+    background: #fff;
+    border-radius: 10px;
+    .close {
+      font-size: 1.2195rem;
+    }
+    .close:not(:disabled):not(.disabled):focus,
+    .close:not(:disabled):not(.disabled):hover {
+      color: #000;
+      text-decoration: none;
+      opacity: 0.75;
+      outline: 0;
+    }
+  }
+  .alert-card {
+    border: none;
+    box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.1),
+      inset 0 2px 0 0 #ced4da;
+  }
+  .alert-card.alert-danger {
+    box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.1),
+      inset 0 2px 0 0 #d22346;
+  }
+  /** NGB ALERT STYLE */
+  
+  /** BUBBLE CIRCLE */
+  .spinner-bubble-primary {
+    color: #639;
+  }
+  .spinner-bubble {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+    display: inline-block;
+    font-size: 8px;
+    margin: 30px auto;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    text-indent: -9999em;
+    -webkit-animation: 1.3s linear infinite bubble-circle;
+    animation: 1.3s linear infinite bubble-circle;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+  .spinner-bubble.inline {
+    position: relative;
+    top: 0%;
+    left: 0%;
+  }
+  @keyframes bubble-circle {
+    0%,
+    100% {
+      box-shadow: 0 -3em 0 0.2em, 2em -2em 0 0, 3em 0 0 -1em, 2em 2em 0 -1em,
+        0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 0;
+    }
+    12.5% {
+      box-shadow: 0 -3em 0 0, 2em -2em 0 0.2em, 3em 0 0 0, 2em 2em 0 -1em,
+        0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
+    }
+    25% {
+      box-shadow: 0 -3em 0 -0.5em, 2em -2em 0 0, 3em 0 0 0.2em, 2em 2em 0 0,
+        0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
+    }
+    37.5% {
+      box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 0, 2em 2em 0 0.2em,
+        0 3em 0 0, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
+    }
+    50% {
+      box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 0,
+        0 3em 0 0.2em, -2em 2em 0 0, -3em 0 0 -1em, -2em -2em 0 -1em;
+    }
+    62.5% {
+      box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em,
+        0 3em 0 0, -2em 2em 0 0.2em, -3em 0 0 0, -2em -2em 0 -1em;
+    }
+    75% {
+      box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em,
+        0 3em 0 -1em, -2em 2em 0 0, -3em 0 0 0.2em, -2em -2em 0 0;
+    }
+    87.5% {
+      box-shadow: 0 -3em 0 0, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em,
+        0 3em 0 -1em, -2em 2em 0 0, -3em 0 0 0, -2em -2em 0 0.2em;
+    }
+  }
+  /** BUBBLE CIRCLE */

@@ -1,0 +1,11 @@
+<div class="breadcrumb">
+  <h1>{{ menuItems ? menuItems[menuItems.length - 1].label : '' }}</h1>
+  <ul class="mt-3">
+    <li *ngFor="let breadcrumb of menuItems" [hidden]="!breadcrumb.label">
+      <a [routerLink]="breadcrumb.url" *ngIf="breadcrumb.label">
+        {{ breadcrumb.label }}
+      </a>
+    </li>
+  </ul>
+</div>
+<hr />

@@ -1,0 +1,17 @@
+<ngb-toast
+  *ngFor="let toast of toastService.toasts"
+  [autohide]="true"
+  [delay]="toast.delay || 5000"
+  (hide)="toastService.remove(toast)"
+>
+  <ng-template [ngIf]="isTemplate(toast)" [ngIfElse]="standard">
+    <ng-template [ngTemplateOutlet]="toast.textOrTpl"></ng-template>
+  </ng-template>
+
+  <ng-template #standard>
+    <ngb-alert [type]="toast.options.classname" class="alert-card alert" (close)="toastService.remove(toast)">
+      <h5>{{ toast.toast.title }}</h5>
+      <div class="msg" [innerHTML]="toast.toast.msg"></div>
+    </ngb-alert>
+  </ng-template>
+</ngb-toast>

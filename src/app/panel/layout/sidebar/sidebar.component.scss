@@ -1,0 +1,136 @@
+.sidebar {
+  display: flex;
+  position: fixed;
+  top: 0;
+
+  .sidebar-left {
+    background-color: var(--primary-color);
+    min-height: 100vh;
+    width: 76px;
+    left: 0;
+    box-shadow: 0 4px 20px 1px rgba(0, 0, 0, 0.06),
+      0 1px 4px rgba(0, 0, 0, 0.08);
+
+    .logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 68px;
+      border-bottom: 1px solid rgba(248, 249, 250, 0.05);
+
+      img {
+        width: 50px;
+      }
+    }
+
+    ul.navigation-left {
+      width: 100%;
+      list-style: none;
+
+      li {
+        color: #fff !important;
+        text-align: center;
+        position: relative;
+        display: block;
+        width: 100%;
+        cursor: pointer;
+        border-bottom: 1px solid rgba(248, 249, 250, 0.05);
+        padding: 22px 0;
+        outline: none !important;
+      }
+
+      li.active {
+        border-left: 5px solid #fff;
+      }
+
+      li:hover:not(.active) {
+        border-left: 2px solid #fff;
+      }
+    }
+  }
+
+  .sidebar-submenu {
+    min-height: 100vh;
+    width: 220px;
+    ;
+    transition: all 0.24s ease-in-out;
+    background: #fff;
+    box-shadow: 0 4px 20px 1px rgba(0, 0, 0, 0.06),
+      0 1px 4px rgba(0, 0, 0, 0.08);
+
+    header {
+      .logo {
+        width: 170px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 70px;
+      }
+
+      h6 {
+        font-size: 18px;
+        margin-bottom: 4px;
+        font-weight: 600;
+      }
+
+      p {
+        color: #70657b;
+        margin-bottom: 12px;
+      }
+    }
+
+    .menu {
+      list-style: none;
+      text-decoration: none;
+
+      a,
+      a:focus,
+      a:hover,
+      .btn {
+        text-decoration: none;
+      }
+
+      li button {
+        color: #332e38;
+        text-transform: capitalize;
+        display: flex;
+        align-items: center;
+        font-size: 13px;
+        cursor: pointer;
+        padding: 12px 24px;
+        transition: 0.15s all ease-in;
+
+
+        span {
+          vertical-align: middle;
+          font-weight: 400;
+        }
+      }
+
+      li button:hover,
+      li button.active {
+        background: #eee;
+      }
+    }
+  }
+}
+
+.sidebar-spacer {
+  width: 296px;
+}
+
+
+
+
+@media(max-width: 992px) {
+  .sidebar {
+    .sidebar-submenu:not(.open) {
+      display: none;
+    }
+
+  }
+
+  .sidebar-spacer {
+    width: 76px;
+  }
+}

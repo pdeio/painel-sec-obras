@@ -1,0 +1,51 @@
+.auth-layout-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-size: cover;
+    .logo-svg {
+      filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(0%)
+        contrast(50%);
+    }
+    .text-18 {
+      font-size: 18px;
+    }
+    .auth-content {
+      max-width: 660px;
+      margin: auto;
+      .card {
+          background: #ffffffe0!important;
+      }
+    }
+    @media (min-width: 1024px) {
+      .auth-content {
+        min-width: 660px;
+      }
+    }
+    .auth-right {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
+  
+    .btn-outline-primary {
+      color: #639;
+      border-color: #639;
+      background: rgba(238, 238, 238, 0.6);
+      border-radius: 40px;
+    }
+    .btn-outline-primary:hover {
+      color: #fff;
+      background-color: #639;
+      border-color: #639;
+    }
+    .left-side {
+      background: rgba(238, 238, 238, 0.6);
+    }
+
+  }
+ 

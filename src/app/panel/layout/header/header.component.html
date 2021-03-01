@@ -1,0 +1,24 @@
+<div class="header shadow-sm container-fluid clearfix py-3 px-2">
+  <div class="float-right" style="display: flex">
+    <div ngbDropdown class="user col align-self-end dropdown">
+      <div
+        ngbDropdownToggle
+        class="avatar rounded-circle"
+        [style]="'background-image: url( ' + user.avatar + ' )'"
+      ></div>
+      <div
+        aria-labelledby="userDropdown"
+        ngbDropdownMenu
+        class="dropdown-menu"
+        x-placement="bottom-right"
+        style="top: 36px; left: -109px"
+      >
+        <div class="dropdown-header">
+          Olá, {{ user.name }}<span class="bt bt-lock-user bt-sm ml-2"></span>
+        </div>
+        <button ngbDropdownItem>Meu perfil</button>
+        <button ngbDropdownItem (click)="onLogOut()">Sair</button>
+      </div>
+    </div>
+  </div>
+</div>
